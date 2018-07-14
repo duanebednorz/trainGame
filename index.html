@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Super Happy Train Tracker Time</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="trgame.js"></script>
+    
+    <!-- Code to the JavaScript File -->
+    
+
+    <!-- Style to fix the issue of text extending past panel length -->
+    <style>
+        .card-body a {
+            word-break: break-all;
+        }
+
+        .articleHeadline {
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Bootstrap Search -->
+    <div class="container">
+
+        <!-- Jumbotron for Title -->
+        <div class="jumbotron" style="background-color: #20315A ; color: white;">
+            <h1 class="text-center">
+                <strong>
+                    <i class="fa fa-train-o"></i> Super Happy Train Tracker Time </strong>
+            </h1>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <strong>
+                    <i class="fa fa-train-alt"></i> Train Schedule</strong>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Desitination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Insert movie rows here -->
+                </tbody>
+            </table>
+            <div class="card-body">
+            </div>
+        </div>
+
+        <!-- Row for Searching New York Times -->
+        <div class="row">
+            <div class="col-sm-12">
+                <br>
+                <!-- First panel is for handling the search parameters -->
+                <div class="card">
+                    <div class="card-header">
+                        <strong>
+                            <i class="fa fa-train-alt"></i> Add Train</strong>
+                    </div>
+                    <div class="card-body">
+
+                        <!-- Here we create an HTML Form for handling the inputs-->
+                        <form role="form" id="train-form">
+
+                            <!-- Here we create the text box for capturing the search term-->
+                            <div class="form-group">
+                                <label for="train">Train Name</label>
+                                <input type="text" class="form-control" id="add-train">
+                            </div>
+
+                            <!-- Here we capture the number of records that the user wants to retrieve  -->
+                            <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="text" class="form-control" id="train-destination">
+                            </div>
+
+                            <!-- Here we capture the Start Year Parameter-->
+                            <div class="form-group">
+                                <label for="first-train">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="train-time">
+                            </div>
+
+                            <!-- Here we capture the End Year Parameter -->
+                            <div class="form-group">
+                                <label for="frequency">Frequency (min)</label>
+                                <input type="text" class="form-control" id="frequency">
+                            </div>
+
+                            <!-- Here we have our final submit button -->
+                            <button type="submit" class="btn btn-default" id="run-search">
+                                <i class="fa fa-submit"></i> Submit</button>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+</body>
+
+</html>
